@@ -1,0 +1,4 @@
+<resources>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+</resources>

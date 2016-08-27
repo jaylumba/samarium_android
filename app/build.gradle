@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.avinnovz.sss"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        dev {
+            applicationId "com.avinnovz.sss"
+            resValue "string", "app_name", "MySSS App"
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    /** VERSIONS */
+    final ANDROID_SUPPORT_VERSION = "24.2.0"
+    final BUTTERKNIFE_VERSION = "8.1.0"
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    /** ANDROID SUPPORT */
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:recyclerview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:cardview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:design:$ANDROID_SUPPORT_VERSION"
+    /** BUTTERKNIFE */
+    compile "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+    apt "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.3'
+    compile 'com.wang.avi:library:2.1.3'
+}
