@@ -12,20 +12,36 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.avinnovz.sss.R;
 import com.avinnovz.sss.base.BaseActivity;
+import com.avinnovz.sss.helpers.DateHelper;
+import com.avinnovz.sss.helpers.ShapeHelper;
 import com.avinnovz.sss.interfaces.OnConfirmDialogListener;
+
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.toolbar)Toolbar toolbar;
-    @BindView(R.id.navigationView) NavigationView navigationView;
-    @BindView(R.id.drawerLayout) DrawerLayout drawerLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.toolbarTitle)
+    TextView toolbarTitle;
+    @BindView(R.id.navigationView)
+    NavigationView navigationView;
+    @BindView(R.id.drawerLayout)
+    DrawerLayout drawerLayout;
+    @BindView(R.id.imgNewsPic)
+    ImageView imgNewsPic;
+    @BindView(R.id.tvNewsDate)
+    TextView tvNewsDate;
+    @BindView(R.id.tvNewsHeadline)
+    TextView tvNewsHeadline;
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
@@ -33,9 +49,9 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
+        initToolbar();
         initNavigationDrawer();
-        toolbar.setTitle(R.string.app_name);
+        initData();
     }
 
     @Override
@@ -54,9 +70,9 @@ public class MainActivity extends BaseActivity {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_notification, menu);
-        for(int i = 0; i < menu.size(); i++){
+        for (int i = 0; i < menu.size(); i++) {
             Drawable drawable = menu.getItem(i).getIcon();
-            if(drawable != null) {
+            if (drawable != null) {
                 drawable.mutate();
                 drawable.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
             }
@@ -64,9 +80,15 @@ public class MainActivity extends BaseActivity {
         return true;
     }
 
+    private void initToolbar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbarTitle.setText(R.string.app_name);
+    }
+
     public void initNavigationDrawer() {
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
-                R.string.open_drawer,R.string.close_drawer) {
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.open_drawer, R.string.close_drawer) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -81,9 +103,10 @@ public class MainActivity extends BaseActivity {
         actionBarDrawerToggle.syncState();
         initSideDrawerMenu();
     }
+
     private void initSideDrawerMenu() {
         final View view = navigationView.getHeaderView(0);
-        final TextView tvProfileName = (TextView)view.findViewById(R.id.tvProfileName);
+        final TextView tvProfileName = (TextView) view.findViewById(R.id.tvProfileName);
         navigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.menu_item_logout:
@@ -108,5 +131,10 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+    private void initData() {
+        tvNewsDate.setText(DateHelper.formatDate(new Date(), "dd MMM yyyy"));
+        tvNewsDate.setBackground(ShapeHelper.getPointedRectangleBg());
+        tvNewsHeadline.setText("SSS issues over 300,000 membership numbers to online applicants");
+    }
 
 }

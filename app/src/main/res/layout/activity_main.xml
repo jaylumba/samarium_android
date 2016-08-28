@@ -4,36 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    tools:openDrawer="start"
+    android:layout_height="match_parent"
     tools:menu="@menu/menu_notification"
-    android:layout_height="match_parent">
+    tools:openDrawer="none">
 
-    <android.support.design.widget.CoordinatorLayout
+    <LinearLayout
         android:id="@+id/content_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:title="@string/app_name" />
+        <include layout="@layout/include_toolbar" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <FrameLayout
-                android:id="@+id/contentLayout"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_scrollFlags="scroll" />
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_homepic" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_18sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgNewsPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_news1" />
+
+                <TextView
+                    android:id="@+id/tvNewsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="#BB000000"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvNewsHeadline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="#88000000"
+                    android:padding="@dimen/_4sdp"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_24sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
         </LinearLayout>
-    </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigationView"
