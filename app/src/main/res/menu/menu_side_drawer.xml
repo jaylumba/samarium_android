@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:title="@string/membership_profile">
+            <menu>
+                <item
+                    android:id="@+id/menu_item_contribution"
+                    android:icon="@drawable/ic_assessment_black_24dp"
+                    android:title="@string/contribution_other_records" />
+                <item
+                    android:id="@+id/menu_item_usefulinfo"
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="@string/useful_info" />
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item android:title="@string/sss_profile">
+            <menu>
+                <item
+                    android:id="@+id/menu_item_sssmandate"
+                    android:icon="@drawable/ic_flag_black_24dp"
+                    android:title="@string/the_sss_mandate" />
+                <item
+                    android:id="@+id/menu_item_managementdirectory"
+                    android:icon="@drawable/ic_contacts_black_24dp"
+                    android:title="@string/management_directory" />
+                <item
+                    android:id="@+id/menu_item_sssbranches"
+                    android:icon="@drawable/ic_place_black_24dp"
+                    android:title="@string/sss_branches" />
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item android:title="@string/sss_social">
+            <menu>
+                <item
+                    android:id="@+id/menu_item_fbaccount"
+                    android:icon="@drawable/ic_fb_black_24dp"
+                    android:title="@string/facebook_account" />
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item
+            android:id="@+id/menu_item_about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/about_mysss_app" />
+
+        <item
+            android:id="@+id/menu_rate"
+            android:icon="@drawable/ic_rate_black_24dp"
+            android:title="@string/rate_this_app" />
+
+        <item
+            android:id="@+id/menu_item_changepassword"
+            android:icon="@drawable/ic_lock_black_24dp"
+            android:title="@string/change_password" />
+
+        <item
+            android:id="@+id/menu_item_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="@string/logout" />
+    </group>
+</menu>

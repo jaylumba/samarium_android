@@ -1,4 +1,23 @@
 <resources>
     <string name="login">LOGIN</string>
     <string name="sign_up">SIGN UP</string>
+
+    <!-- navigation drawer -->
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+    <string name="welcome">Welcome!</string>
+    <string name="membership_profile">Membership Profile</string>
+    <string name="contribution_other_records">Contribution/ Other Records</string>
+    <string name="useful_info">Useful Info</string>
+    <string name="the_sss_mandate">The SSS Mandate</string>
+    <string name="management_directory">Management Directory</string>
+    <string name="sss_branches">SSS Branches</string>
+    <string name="sss_profile">SSS Profile</string>
+    <string name="sss_social">SSS Social</string>
+    <string name="facebook_account">Facebook Account</string>
+    <string name="about_mysss_app">About MySSS App</string>
+    <string name="rate_this_app">Rate This App</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+
 </resources>
