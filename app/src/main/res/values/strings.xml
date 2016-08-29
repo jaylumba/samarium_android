@@ -139,6 +139,33 @@
         ]]>
     </string>
 
+    <!--glossary of terms-->
+    <string name="desc_glossary_of_terms">
+        1.	<font color="#303f9f"><b>Beneficiaries:</b></font>
+        \n\n•	<i>Primary beneficiaries</i> - the primary beneficiaries who shall be entitled to the benefits are the dependent spouse until he or she remarries and the dependent legitimate; legitimated or legally adopted, and illegitimate children, subject to the certain conditions.
+        \n\n•	<i>Secondary beneficiaries</i> - the secondary beneficiaries who shall be entitled to the benefits in the absence of the primary beneficiaries are the dependent parents. In the absence of dependent parents, any other person designated by the member subject to certain conditions.
+        \n\n2.	<font color="#303f9f"><b>Contribution</b></font> - the amount paid to the SSS by and on behalf of the member.
+        \n\n3.	<font color="#303f9f"><b>Lump sum amount</b></font> - is granted to a retiree or a disabled member (who suffers from permanent total disability or permanent partial disability) as well as to the primary or secondary beneficiaries of a deceased member who has not paid the required number of contributions to qualify for the monthly pension.
+        \n\n4.	<font color="#303f9f"><b>Monthly pension</b></font> - is a lifetime cash benefit paid to a retiree or a disabled member (who suffers from permanent total disability or permanent partial disability) as well as to the primary beneficiaries of a deceased member who has met the required number of contributions to qualify for the monthly pension.
+        \n\n5.	<font color="#303f9f"><b>Monthly Salary Credit (MSC)</b></font> - The compensation base for contributions and benefits related to the member\'s total earnings for the month, as indicated in the schedule in Section 18 of the SS Law.
+        \n\n6.	<font color="#303f9f"><b>Non-working spouse</b></font> - a person legally married to a currently employed and actively paying SSS member who devotes full time in the management of household and family affairs may be covered on a voluntary basis provided there is approval of the working spouse. The person should never have been a member of the SSS.
+        \n\n7.	<font color="#303f9f"><b>Overseas Filipino Worker (OFW)</b></font> - a Filipino recruited in the Philippines by a foreign-based employer for employment abroad; having source of income in a foreign country; and permanent resident in a foreign country.
+        \n\n8.	<font color="#303f9f"><b>Self-employed member</b></font> - a person who has no employer other than himself and derives income from his physical and mental effort.
+        \n\n9.	<font color="#303f9f"><b>SS Form E-1 (Personal Record)</b></font> - a person registering with the SSS for the first time as a prospective employee should accomplish this form.
+        \n\n10.	<font color="#303f9f"><b>SS Form E-4 (Member\'s Data Amendment Form)</b></font> - Changes in the member\'s record should be reported immediately to the nearest SSS office by accomplishing this form.
+        \n\n11.	<font color="#303f9f"><b>UMID (Unified Multi-Purpose Identification Card)</b></font> - a card which contains a contactless chip and magnetic stripe that stores information and can be used when transacting with participating government agencies such as SSS, GSIS, Pag-IBIG and PhilHealth.
+        \n\n12.	<font color="#303f9f"><b>Voluntary Member</b></font> - a member who is separated from employment or ceased to be self-employed/overseas Filipino worker/non-working spouse and would like to continue paying his/her contributions.
+    </string>
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>
