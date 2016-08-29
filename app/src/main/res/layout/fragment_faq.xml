@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.avinnovz.sss.fragments.ContributionScheduleFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_faqs" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFaqs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_4sdp"
+        android:layout_weight="7" />
+
+</LinearLayout>

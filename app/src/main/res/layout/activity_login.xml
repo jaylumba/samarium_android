@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/black_gradient_drawable"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_margin"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/activity_margin"
     tools:context="com.avinnovz.sss.activities.LoginActivity">
 
     <RelativeLayout
@@ -36,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_20sdp"
+                tools:ignore="MissingPrefix" />
 
         </LinearLayout>
 
@@ -64,7 +65,8 @@
                 android:paddingRight="@dimen/_10sdp"
                 android:text="@string/login"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingPrefix" />
 
             <Space
                 android:layout_width="@dimen/_5sdp"
@@ -81,7 +83,8 @@
                 android:paddingRight="@dimen/_10sdp"
                 android:text="@string/sign_up"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingPrefix" />
 
         </LinearLayout>
 

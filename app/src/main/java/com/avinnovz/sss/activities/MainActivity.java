@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.avinnovz.sss.R;
 import com.avinnovz.sss.base.BaseActivity;
+import com.avinnovz.sss.fragments.ChangePasswordDialogFragment;
 import com.avinnovz.sss.helpers.DateHelper;
 import com.avinnovz.sss.helpers.ShapeHelper;
 import com.avinnovz.sss.interfaces.OnConfirmDialogListener;
@@ -109,6 +110,18 @@ public class MainActivity extends BaseActivity {
         final TextView tvProfileName = (TextView) view.findViewById(R.id.tvProfileName);
         navigationView.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
+                case R.id.menu_item_usefulinfo:
+                    moveToOtherActivity(UsefulInfoActivity.class);
+                    break;
+                case R.id.menu_item_sssmandate:
+                    moveToOtherActivity(SssMandateActivity.class);
+                    break;
+                case R.id.menu_item_about:
+                    moveToOtherActivity(AboutActivity.class);
+                    break;
+                case R.id.menu_item_changepassword:
+                    changePassword();
+                    break;
                 case R.id.menu_item_logout:
                     showConfirmDialog("", "Logout", "Are you sure you want to logout from the app?",
                             "Yes", "No", new OnConfirmDialogListener() {
@@ -137,4 +150,9 @@ public class MainActivity extends BaseActivity {
         tvNewsHeadline.setText("SSS issues over 300,000 membership numbers to online applicants");
     }
 
+    private void changePassword() {
+        ChangePasswordDialogFragment fragment = ChangePasswordDialogFragment.newInstance();
+        fragment.setOnChangePasswordListener((oldPassword, newPassword) -> {showSnackbarSuccess("Change password successful.");});
+        fragment.show(getFragmentManager(), "chane password");
+    }
 }

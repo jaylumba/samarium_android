@@ -19,6 +19,7 @@ import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
@@ -64,10 +65,17 @@ public class BaseActivity extends AppCompatActivity {
     public void setError(final TextView textView, final String message) {
         textView.setError(message);
         textView.requestFocus();
+
+    }
+
+    public void setError(final TextInputLayout textInputLayout, final String message) {
+        textInputLayout.setError(message);
+        textInputLayout.setErrorEnabled(true);
+        textInputLayout.getEditText().requestFocus();
     }
 
     public void showToast(String message) {
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     public boolean isValidEmail(final String email) {
@@ -78,7 +86,7 @@ public class BaseActivity extends AppCompatActivity {
         if (customProgressDialogFragment == null) {
             customProgressDialogFragment = CustomProgressDialogFragment.newInstance(message);
             customProgressDialogFragment.setCancelable(false);
-            customProgressDialogFragment.show(getFragmentManager(),"progress");
+            customProgressDialogFragment.show(getFragmentManager(), "progress");
         }
     }
 
@@ -100,8 +108,8 @@ public class BaseActivity extends AppCompatActivity {
                                   final OnConfirmDialogListener onConfirmDialogListener) {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_error_confirm);
-        ((TextView)dialog.findViewById(R.id.tvHeader)).setText(header);
-        ((TextView)dialog.findViewById(R.id.tvMessage)).setText(message);
+        ((TextView) dialog.findViewById(R.id.tvHeader)).setText(header);
+        ((TextView) dialog.findViewById(R.id.tvMessage)).setText(message);
         final Display display = getWindowManager().getDefaultDisplay();
         final Point size = new Point();
         display.getSize(size);
@@ -135,8 +143,22 @@ public class BaseActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void showSnackbar(final View parent,final String message) {
-        Snackbar.make(parent,message,Snackbar.LENGTH_LONG).show();
+    public void showSnackbar(final View parent, final String message) {
+        Snackbar.make(parent, message, Snackbar.LENGTH_LONG).show();
+    }
+
+    public void showSnackbarSuccess(final String message) {
+        Snackbar snack = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG);
+        View view = snack.getView();
+        view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorSuccessMessage));
+        snack.show();
+    }
+
+    public void showSnackbarError(final String message) {
+        Snackbar snack = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG);
+        View view = snack.getView();
+        view.setBackgroundColor(ContextCompat.getColor(this, R.color.colorErrorMessage));
+        snack.show();
     }
 
     /**
@@ -170,7 +192,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public Drawable getImageById(final int id) {
-        return ContextCompat.getDrawable(this,id);
+        return ContextCompat.getDrawable(this, id);
     }
 
     public void setToolbarTitle(final String title) {
@@ -211,9 +233,13 @@ public class BaseActivity extends AppCompatActivity {
         animateToRight(this);
     }
 
-    public SimpleDateFormat getDateFormatter() { return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss"); }
+    public SimpleDateFormat getDateFormatter() {
+        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+    }
 
-    public SimpleDateFormat getSDF() { return  new SimpleDateFormat("EEE, yyyy-MM-dd hh:mm a"); }
+    public SimpleDateFormat getSDF() {
+        return new SimpleDateFormat("EEE, yyyy-MM-dd hh:mm a");
+    }
 
     public PrettyTime getPrettyTime() {
         return new PrettyTime();
@@ -221,8 +247,8 @@ public class BaseActivity extends AppCompatActivity {
 
     public String getFilePath(final Intent data) {
         final Uri selectedImage = data.getData();
-        String[] filePathColumn = { MediaStore.Images.Media.DATA };
-        Cursor cursor = getContentResolver().query(selectedImage,filePathColumn, null, null, null);
+        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
         cursor.moveToFirst();
         final int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
         final String picturePath = cursor.getString(columnIndex);
@@ -240,10 +266,10 @@ public class BaseActivity extends AppCompatActivity {
             return bitmap;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            LogHelper.log("img","file not found exception --> " + e.getMessage());
+            LogHelper.log("img", "file not found exception --> " + e.getMessage());
         } catch (IOException ioe) {
             ioe.printStackTrace();
-            LogHelper.log("img","io exception ---> " + ioe.getMessage());
+            LogHelper.log("img", "io exception ---> " + ioe.getMessage());
         }
         return null;
     }
@@ -265,7 +291,7 @@ public class BaseActivity extends AppCompatActivity {
             fos.close();
             return f;
         } catch (IOException e) {
-            LogHelper.log("select_image","unable to select image --> " + e.getMessage());
+            LogHelper.log("select_image", "unable to select image --> " + e.getMessage());
             e.printStackTrace();
             return null;
         }
@@ -296,7 +322,7 @@ public class BaseActivity extends AppCompatActivity {
         return file;
     }
 
-    private void resizeImage(final File file,final Matrix matrix) {
+    private void resizeImage(final File file, final Matrix matrix) {
         try {
             final BitmapFactory.Options options = new BitmapFactory.Options();
             options.inSampleSize = 0; //try to decrease decoded image
@@ -304,7 +330,8 @@ public class BaseActivity extends AppCompatActivity {
             FileOutputStream fos = new FileOutputStream(file);
             bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
             bitmap.compress(Bitmap.CompressFormat.JPEG, 50, fos);
-        } catch (Exception ex) {}
+        } catch (Exception ex) {
+        }
     }
 
     public File createImageFile() {

@@ -1,4 +1,5 @@
 <resources>
+    <!--login-->
     <string name="login">LOGIN</string>
     <string name="sign_up">SIGN UP</string>
 
@@ -19,5 +20,125 @@
     <string name="rate_this_app">Rate This App</string>
     <string name="change_password">Change Password</string>
     <string name="logout">Logout</string>
+
+    <!--change password-->
+    <string name="change_password_header">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="cancel">CANCEL</string>
+
+    <!--about-->
+    <string name="title_about">About MySSS App</string>
+    <string name="desc_about">My.SSS is an online service portal that allows SSS members exclusive access to their contributions and membership records, make online transactions, set appointments with their SSS servicing branch, and request copies of their records, as needed.
+        \n\nMy.SSS also has a Members Forum wherein members may discuss SSS-related issues. The Forum is moderated by SSS employees and/or officials who are knowledgeable and authorized to respond to members\' concerns or direct their complaints.
+        \n\nTo access My.SSS, individual or corporate members must register for their own username and password, which shall be issued by the SSS.
+    </string>
+
+    <!--sss mandate-->
+    <string name="title_sssmandate">The SSS Mandate</string>
+    <string name="desc_sss_mandate">
+        <font color="#303f9f"><b>DECLARATION OF POLICY</b></font>
+        \n\n\"It is the policy of the State to establish, develop, promote and perfect a sound and viable tax-exempt social security system suitable to the needs of the people throughout the Philippines which shall promote social justice and provide meaningful protection to members and their families against the hazards of disability, sickness, maternity, old age, death and other contingencies resulting in loss of income or financial burden. Toward this end, the State shall endeavor to extend social security protection to workers and their beneficiaries.\" (Section 2, RA 8282)
+        \n\n<font color="#303f9f"><b>STATEMENT OF MISSION</b></font>
+        \n\nTo manage a sound and viable social security system which shall promote social justice and provide meaningful protection to members and their families against the hazards of disability, sickness, maternity, old age, death and other contingencies resulting in loss of income or financial burden.
+        \n\n<font color="#303f9f"><b>STATEMENT OF VISION</b></font>
+        \n\nA viable social security institution providing universal and equitable social protection through world-class service.
+        \n\n<font color="#303f9f"><b>STATEMENT OF CORPORATE VALUES</b></font>
+        \n\nThe SSS aims to institutionalize a corporate culture that instills the core values of trust, empowerment and teamwork.
+    </string>
+
+    <!--useful info-->
+    <string name="title_usefulinfo">Useful Info</string>
+
+    <!--faqs-->
+    <string name="faq1_question">When a person has secured an SS number, does it mean that he/she is already a covered SSS member and therefore, has the right to social security benefits?</string>
+    <string name="faq1_answer">
+        <![CDATA[
+        Issuance of SS number does not immediately qualify you for coverage or benefits. You must first be employed in an occupation subject to and reported for SSS coverage.
+        <br/><br/>However, once you become a covered SSS member, you become a member for life. The contributions that you remit become savings for the future that will serve as basis for the granting of social security benefits in times of contingencies. Membership cannot be withdrawn and contributions paid cannot refunded.
+        ]]>
+    </string>
+    <string name="faq2_question">What should I do if there are changes in my personal record?</string>
+    <string name="faq2_answer">
+        <![CDATA[
+        Changes in your record should be reported immediately to the nearest SSS office through the submission of Member\'s Data Change Request (SS Form E-4) and the required supporting documents:
+        <br/><br/>•	Change of civil status from Single to Married - Marriage contract
+        <br/><br/>•	Change of civil status from Married to Single - Death certificate (if due to death of previously reported spouse); Certificate of Finality of Annulment or Decree of Divorce
+        <br/><br/>•	New/additional/change of dependents/beneficiaries - Birth or Baptismal Certificate(s) of children or marriage contract for spouses
+        <br/><br/>•	Correction of name/date of birth - Birth or Baptismal Certificate or unexpired Passport
+        ]]>
+    </string>
+    <string name="faq3_question">What is the effect of non-reporting and non-remittance of contributions?</string>
+    <string name="faq3_answer">
+        <![CDATA[
+        <b>To the Employee</b>
+        <br/><br/>The employee is still entitled to SS benefits even if the employer fails or refuses to remit the SSS contributions.
+        <br/><br/><b>To the Employer</b>
+        <br/><br/>An employer who does not report temporary or provisional employees is violating the SS law.
+        <br/>The employer is liable to the employees and must:
+        <br/><br/>1.	pay the benefits of those who die, become disabled , get sick or reach retirement age;
+        <br/><br/>2.	pay all unpaid contributions plus a penalty of three percent per month; and
+        <br/><br/>3.	be held liable for a criminal offense punishable by fine and/or imprisonment.
+        <br/><br/><b>To the Self-employed Person and Voluntary Member</b>
+        <br/><br/>A self-employed person who fails to register with the SSS may be subjected to fines and/or imprisoned. However, in the event the self-employed or voluntary member does not realize earnings in a given month, payment of SSS contributions for that month is no longer required.
+        <br/><br/>Self-employed and voluntary members may pay their monthly contributions prospectively or in advance, but never retroactively to cover month/s when no contribution payments were remitted.
+        <br/><br/>In the case of the covered Non-Working Spouse, if he/she later becomes employed, self-employed or an OFW, the membership shall be reclassified accordingly as employed or self-employed or OFW.
+        ]]>
+    </string>
+    <string name="faq4_question">What services are exempt from compulsory coverage as employee?</string>
+    <string name="faq4_answer">
+        <![CDATA[
+        •	Casual employment
+        <br/>•	Government service
+        <br/>•	Employment of single proprietor in his own business
+        ]]>
+    </string>
+    <string name="faq5_question">Can employers hire employees without SS numbers?</string>
+    <string name="faq5_answer">
+        <![CDATA[
+        No. Section 24 (e) of the SS Law requires the presentation of SS number as a condition for employment.
+        ]]>
+    </string>
+    <string name="faq6_question">Can anybody secure copies of records submitted to SSS by members?</string>
+    <string name="faq6_answer">
+        <![CDATA[
+        No. Section 24 (c) of the SS Law provides for the confidentiality of members\' records. SSS records can only be obtained by persons other than the member through the latter\'s written authorization, or in compliance to a subpoena duces tecum, or by the authority of the SSS President.
+        ]]>
+    </string>
+    <string name="faq7_question">Can a member withdraw membership with the SSS?</string>
+    <string name="faq7_answer">
+        <![CDATA[
+         No. When a person registers and is covered for SSS membership, he/she becomes a member for life.
+        <br/><br/>Even during such time that the member fails to remit contributions, the benefits and loan privileges provided by SSS can still be availed of, as long as the member meets the qualifying conditions for entitlement thereto.
+        ]]>
+    </string>
+    <string name="faq8_question">When a member loses the SS card or cannot remember the SS number, should the member secure another SS number?</string>
+    <string name="faq8_answer">
+        <![CDATA[
+        No. The SS number assigned to a member is the lifetime number and must always be used in all transactions with the SSS. If the member wishes to replace a lost SS ID card or cannot remember his/her SS number, it is advisable to inquire from the nearest SSS branch.
+        <br/><br/>The member should never secure another number, as having multiple SS numbers will cause delays in the processing of future benefit claims and loan applications.
+        <br/><br/>If a member has more than one SS number, he/she should visit the SSS servicing branch to request for the cancellation of the other number/s and the consolidation of all contributions under the retained number. From then on, the retained SS number should be used in all transactions with the SSS.
+        ]]>
+    </string>
+    <string name="faq9_question">Who are considered the primary beneficiaries of a member?</string>
+    <string name="faq9_answer">
+        <![CDATA[
+        The primary beneficiaries of a member are the legitimate dependent spouse until he or she remarries, the dependent legitimate, legitimated or legally adopted, and illegitimate children, who are not yet 21 years old.
+        <br/><br/>If the member is single and without children, the benefits will go to the dependent parents who are considered the secondary beneficiaries.
+        <br/><br/>In the absence of both primary and secondary beneficiaries, any other person designated by the member in his/her SSS records shall be considered as the beneficiary.
+        ]]>
+    </string>
+    <string name="faq10_question">What is the effect of a member\'s separation from employment?</string>
+    <string name="faq10_answer">
+        <![CDATA[
+        Upon separation from employment, your employer\'s obligation to pay your SSS contributions ceases at the end of the month of separation. However you shall still be credited with all the contributions paid on your behalf and remain entitled to SSS benefits and privileges, as long as you meet the necessary qualifying conditions.
+        <br/><br/>You may opt to continue paying the total contributions as a voluntary member to maintain your right to full benefits. In case of re-employment with the private sector, you can stop paying as a voluntary member and resume payment of contributions as an employee-member through your employer.
+        <br/><br/>In case of re-employment with the public sector wherein you will be covered by the Government Service Insurance System (GSIS), you may opt to continue paying your SSS contributions as a voluntary member so that you can enjoy social security benefits under both institutions.
+        ]]>
+    </string>
+
+
 
 </resources>

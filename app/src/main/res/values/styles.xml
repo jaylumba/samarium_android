@@ -9,6 +9,7 @@
 
         <item name="android:textColorPrimary">@color/colorPrimaryText</item>
         <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+        <item name="textColorError">@color/colorErrorMessage</item>
 
     </style>
 
