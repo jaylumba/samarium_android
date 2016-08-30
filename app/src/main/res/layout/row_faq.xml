@@ -32,7 +32,7 @@
             android:ellipsize="none"
             android:padding="@dimen/_4sdp"
             android:singleLine="false"
-            android:text="Question1awafawfawfawfawfawfawfwafwafwafwafwasdasd"
+            android:text="Question"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />

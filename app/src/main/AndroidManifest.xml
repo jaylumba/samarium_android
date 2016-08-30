@@ -25,7 +25,9 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.AboutActivity" />
         <activity android:name=".activities.SssMandateActivity" />
-        <activity android:name=".activities.UsefulInfoActivity"></activity>
+        <activity android:name=".activities.UsefulInfoActivity" />
+        <activity android:name=".activities.ManagementActivity" />
+        <activity android:name=".activities.DirectoryDetailActivity"></activity>
     </application>
 
 </manifest>

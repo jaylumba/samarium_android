@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/black_gradient_drawable"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_margin"
-    android:paddingLeft="@dimen/activity_margin"
-    android:paddingRight="@dimen/activity_margin"
-    android:paddingTop="@dimen/activity_margin"
+    android:paddingBottom="@dimen/_12sdp"
+    android:paddingLeft="@dimen/_12sdp"
+    android:paddingRight="@dimen/_12sdp"
+    android:paddingTop="@dimen/_12sdp"
     tools:context="com.avinnovz.sss.activities.LoginActivity">
 
     <RelativeLayout

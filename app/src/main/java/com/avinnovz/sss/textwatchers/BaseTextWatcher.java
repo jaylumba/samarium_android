@@ -28,7 +28,7 @@ public class BaseTextWatcher implements TextWatcher {
             editText.setTag("dirty");
         }
         textInputLayout.setError(null);
-//        textInputLayout.setErrorEnabled(false);
+        textInputLayout.setErrorEnabled(false);
     }
 
     @Override

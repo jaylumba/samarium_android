@@ -83,13 +83,6 @@ public class UsefulInfoActivity extends BaseActivity {
         initTabs();
     }
 
-    private void initToolbar() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbarTitle.setText(R.string.title_usefulinfo);
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -101,6 +94,13 @@ public class UsefulInfoActivity extends BaseActivity {
                 break;
         }
         return false;
+    }
+
+    private void initToolbar() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbarTitle.setText(R.string.title_usefulinfo);
     }
 
     private void initTabs() {

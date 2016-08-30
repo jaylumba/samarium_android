@@ -116,6 +116,9 @@ public class MainActivity extends BaseActivity {
                 case R.id.menu_item_sssmandate:
                     moveToOtherActivity(SssMandateActivity.class);
                     break;
+                case  R.id.menu_item_managementdirectory:
+                    moveToOtherActivity(ManagementActivity.class);
+                    break;
                 case R.id.menu_item_about:
                     moveToOtherActivity(AboutActivity.class);
                     break;

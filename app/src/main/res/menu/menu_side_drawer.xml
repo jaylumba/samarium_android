@@ -5,9 +5,13 @@
         <item android:title="@string/membership_profile">
             <menu>
                 <item
-                    android:id="@+id/menu_item_contribution"
+                    android:id="@+id/menu_item_inquiry"
                     android:icon="@drawable/ic_assessment_black_24dp"
-                    android:title="@string/contribution_other_records" />
+                    android:title="@string/inquiry" />
+                <item
+                    android:id="@+id/menu_item_premium_calculator"
+                    android:icon="@drawable/ic_calculator_black_24dp"
+                    android:title="@string/premium_calculator" />
                 <item
                     android:id="@+id/menu_item_usefulinfo"
                     android:icon="@drawable/ic_info_black_24dp"

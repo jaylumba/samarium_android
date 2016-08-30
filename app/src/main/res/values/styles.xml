@@ -28,6 +28,14 @@
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
+    <style name="FieldsDisplayStyle" parent="FieldsStyle">
+        <item name="android:clickable">false</item>
+        <item name="android:editable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:background">@drawable/bg_edittext_display</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
     <style name="FloatingLabelStyle" parent="TextAppearance.AppCompat">
         //hint color And Label Color in False State
         <item name="android:textColor">@color/colorPrimary</item>
