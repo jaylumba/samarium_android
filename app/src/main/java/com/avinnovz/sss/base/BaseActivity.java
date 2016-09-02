@@ -62,11 +62,11 @@ public class BaseActivity extends AppCompatActivity {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
-    public void setError(final TextView textView, final String message) {
-        textView.setError(message);
-        textView.requestFocus();
-
-    }
+//    public void setError(final TextView textView, final String message) {
+//        textView.setError(message);
+//        textView.requestFocus();
+//
+//    }
 
     public void setError(final TextInputLayout textInputLayout, final String message) {
         textInputLayout.setError(message);
@@ -143,9 +143,9 @@ public class BaseActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void showSnackbar(final View parent, final String message) {
-        Snackbar.make(parent, message, Snackbar.LENGTH_LONG).show();
-    }
+//    public void showSnackbar(final View parent, final String message) {
+//        Snackbar.make(parent, message, Snackbar.LENGTH_LONG).show();
+//    }
 
     public void showSnackbarSuccess(final String message) {
         Snackbar snack = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG);
